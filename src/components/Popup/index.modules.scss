@@ -1,0 +1,17 @@
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: #91c47e;
+  padding: 20px;
+  border: 1px solid #688d5a;
+  transition: 0.3s;
+
+  margin: 0;
+}
+
+.popupP {
+  margin: 0;
+
+}

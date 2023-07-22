@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.basketContent {
+  overflow-y: auto;
+}
+.basketContent::-webkit-scrollbar {
+  width: 10px; /* Ширина полосы прокрутки */
+}
+.basketContent::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет ползунка */
+  border-radius: 4px; /* Скругление углов ползунка */
+}
+.basketContent::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Цвет фона трека */
+  border-radius: 4px; /* Скругление углов трека */
+}
+
+.cart {
+  position: relative;
+}
+.cart .imageUrl {
+  width: 225px;
+  height: 300px;
+}
+.cart .cartContent {
+  display: flex;
+  flex-direction: column;
+}
+.cart .cartContent h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.cart .cartContent .clicker {
+  flex: 1;
+}
+.cart .cartContent .clicker img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cart .cartContent .clicker .buttonMinus, .cart .cartContent .clicker .buttonPlus {
+  padding: 11px 10px;
+  background-color: rgba(225, 225, 225, 0.63);
+  border-radius: 12px;
+  border: none;
+}
+.cart .deleteCart {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.cart .deleteCart button {
+  padding: 13px;
+  background-color: #443a3a;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.cart .deleteCart img {
+  width: 15px;
+  height: 15px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/*# sourceMappingURL=index.modules.css.map */

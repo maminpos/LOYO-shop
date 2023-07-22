@@ -1,0 +1,79 @@
+.basketContent {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888; /* Цвет ползунка */
+    border-radius: 4px; /* Скругление углов ползунка */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Цвет фона трека */
+    border-radius: 4px; /* Скругление углов трека */
+  }
+}
+
+
+
+.cart {
+  position: relative;
+  .imageUrl {
+    width: 225px;
+    height: 300px;
+  }
+
+  .cartContent {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .clicker {
+      flex: 1;
+
+      img {
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .buttonMinus, .buttonPlus {
+        padding: 11px 10px;
+        background-color: rgba(225, 225, 225, 0.63);
+        border-radius: 12px;
+        border: none;
+      }
+    }
+  }
+
+
+
+  .deleteCart {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+
+    button {
+      padding: 13px;
+      background-color: #443a3a;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      width: 15px;
+      height: 15px;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+  }
+}

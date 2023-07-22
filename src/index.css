@@ -1,0 +1,198 @@
+@charset "UTF-8";
+:root {
+  --wid: 1vw ;
+}
+
+html body {
+  margin: 0;
+  background-color: #e9ebec;
+  font-family: "Inter", system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html body::-webkit-scrollbar {
+  width: 10px; /* Ширина полосы прокрутки */
+}
+html body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет ползунка */
+}
+html body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Цвет фона трека */
+}
+
+* {
+  font-family: Inter, system-ui;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  background-color: rgba(96, 96, 96, 0.24);
+  z-index: 1;
+}
+.overlay .basketBackOverlay {
+  background-color: transparent;
+  width: 100%;
+  height: 200vh;
+  position: fixed;
+  transition: 0.1s;
+}
+.overlay .basketDrawing {
+  padding: 10px 30px 30px;
+  margin-top: 5vh;
+  background-color: rgb(255, 255, 255);
+  width: 69vw;
+  left: 15vw;
+  height: 90vh;
+  position: absolute;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.overlay .basketDrawing .basketHeader h4 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}
+.overlay .basketDrawing .basketHeader img {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.1s ease-in-out;
+}
+.overlay .basketDrawing .basketHeader :hover {
+  opacity: 1;
+}
+.overlay .basketDrawing .basketContent {
+  flex: 1;
+}
+.overlay .basketDrawing .basketFooter .decor .code button {
+  white-space: nowrap;
+}
+.overlay .basketDrawing .basketFooter .decor .code input {
+  padding: calc(var(--wid) * 0.7) 10vw calc(var(--wid) * 0.7) 1vw;
+  border-radius: 0.6vw;
+  border: 1px solid #cccccc;
+  font-size: calc(var(--wid) * 0.7);
+  margin-right: calc(var(--wid) * 0.5);
+}
+.overlay .basketDrawing .basketFooter .decor .code .enterPromocode {
+  padding: calc(var(--wid) * 0.8) calc(var(--wid) * 7);
+  border-radius: 0.6vw;
+  border: none;
+  font-weight: bold;
+  font-size: calc(var(--wid) * 0.7);
+  margin-right: calc(var(--wid) * 0.5);
+  text-transform: uppercase;
+}
+.overlay .basketDrawing .basketFooter .decor .code .order {
+  padding: calc(var(--wid) * 0.8) calc(var(--wid) * 7);
+  border-radius: 0.6vw;
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #443a3a;
+  font-size: calc(var(--wid) * 0.7);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 90vw;
+  margin: 50px auto;
+}
+
+header {
+  padding: 10px 25px;
+}
+header .leftHeader {
+  margin-left: 60px;
+}
+header .leftHeader img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+header .leftHeader p {
+  font-size: 24px;
+}
+header .mainHeader ul li a {
+  font-size: 24px;
+  transition: color 0.2s ease-in-out;
+  color: #606060;
+}
+header .mainHeader ul li :hover {
+  color: #000000;
+}
+header .rightHeader {
+  margin-right: 83px;
+}
+header .rightHeader img {
+  border-radius: 15px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.content .searchInput select {
+  border: 1px solid #dedede;
+  padding: 10px 35px 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  appearance: none;
+  background-color: transparent;
+}
+.content .searchInput select::-ms-expand {
+  display: none;
+}
+.content .searchInput img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 28%;
+  left: 90%;
+  pointer-events: none;
+}
+
+.filtrationSection {
+  padding: 50px;
+  border-top: 1px solid #dedede;
+}
+
+main {
+  padding: 10px 25px;
+}
+main .card {
+  padding: 10px;
+  height: 720px;
+  box-shadow: 0px 9px 15px 3px rgba(34, 60, 80, 0.1);
+  margin-left: 60px;
+}
+main .card .buttonTitleCard {
+  text-transform: uppercase;
+}
+main .card img {
+  height: 600px;
+  width: 450px;
+}
+main .card button {
+  border: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #be2b2b;
+  cursor: pointer;
+}
+main .card button a {
+  color: white;
+}
+main .card h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=index.css.map */

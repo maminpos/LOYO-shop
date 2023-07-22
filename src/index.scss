@@ -1,0 +1,249 @@
+:root {
+  --wid: 1vw
+}
+
+html {
+
+  body {
+    margin: 0;
+    background-color: #e9ebec;
+    font-family: 'Inter',system-ui;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::-webkit-scrollbar {
+      width: 10px; /* Ширина полосы прокрутки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888; /* Цвет ползунка */
+
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1; /* Цвет фона трека */
+    }
+  }
+}
+
+* {
+  font-family: Inter, system-ui;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  background-color: rgba(96, 96, 96, 0.24);
+  z-index: 1;
+
+  .basketBackOverlay {
+    background-color: transparent;
+    width: 100%;
+    height: 200vh;
+    position: fixed;
+    transition: 0.1s ;
+  }
+
+  .basketDrawing {
+    padding: 10px 30px 30px;
+    margin-top: 5vh;
+    background-color: rgb(255, 255, 255);
+    width: 69vw;
+    left: 15vw;
+    height: 90vh;
+    position: absolute;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    .basketHeader {
+      h4 {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: normal;
+      }
+
+      img {
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.1s ease-in-out;
+
+      }:hover {
+         opacity: 1;
+       }
+    }
+
+    .basketContent {
+      flex: 1;
+    }
+
+    .basketFooter {
+
+      .decor {
+
+        .code {
+
+          button {
+            white-space: nowrap;
+          }
+
+          input {
+            padding: calc(var(--wid) * 0.7 ) 10vw calc(var(--wid) * 0.7 ) 1vw;
+            border-radius: 0.6vw;
+            border: 1px solid #cccccc;
+            font-size: calc(var(--wid) * 0.7);
+            margin-right: calc(var(--wid) * 0.5);;
+          }
+
+          .enterPromocode {
+            padding: calc(var(--wid) * 0.8 ) calc(var(--wid) * 7);
+            border-radius: 0.6vw;
+            border: none;
+            font-weight: bold;
+            font-size: calc(var(--wid) * 0.7);
+            margin-right: calc(var(--wid) * 0.5);;
+            text-transform: uppercase;
+          }
+
+          .order {
+            padding: calc(var(--wid) * 0.8 ) calc(var(--wid) * 7);
+            border-radius: 0.6vw;
+            border: none;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #443a3a;
+            font-size: calc(var(--wid) * 0.7);
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+
+  max-width: 90vw;
+  margin: 50px auto;
+}
+
+header {
+  padding: 10px 25px;
+  .leftHeader {
+    margin-left: 60px;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  .mainHeader {
+     ul {
+       li {
+         a {
+           font-size: 24px;
+           transition: color 0.2s ease-in-out;
+           color: #606060;
+         }
+
+         :hover {
+           color: #000000;
+         }
+       }
+     }
+  }
+
+  .rightHeader {
+    margin-right: 83px;
+    img {
+      border-radius: 15px;
+      width: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+.content {
+
+  .searchInput {
+
+    select {
+      border: 1px solid #dedede;
+      padding: 10px 35px 10px 15px;
+      font-size: 20px;
+      border-radius: 5px;
+      appearance: none;
+      background-color: transparent;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 28%;
+      left: 90%;
+      pointer-events: none;
+    }
+  }
+}
+
+.filtrationSection {
+  padding: 50px;
+  border-top: 1px solid #dedede;
+
+}
+
+main {
+  padding: 10px 25px;
+
+  .card {
+    padding: 10px;
+    height: 720px;
+    box-shadow: 0px 9px 15px 3px rgba(34, 60, 80, 0.1);
+    margin-left: 60px;
+
+    .buttonTitleCard {
+      text-transform: uppercase;
+    }
+
+    img {
+      height: 600px;
+      width: 450px;
+    }
+
+    button {
+      border: none;
+      padding: 5px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: #be2b2b;
+      cursor: pointer;
+
+      a {
+        color: white;
+      }
+    }
+
+    h4 {
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+}
