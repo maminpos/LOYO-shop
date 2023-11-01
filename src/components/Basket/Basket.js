@@ -1,12 +1,12 @@
 import React from "react";
 import style from './index.modules.scss'
 
-function Basket({onCloseBasket, onClickCloseBasket,onDeleteCart, cartItems = []}) {
+function Basket({onCloseBasket, theme, onClickCloseBasket,onDeleteCart, cartItems = []}) {
 
     const [sumItems, setSumItems] = React.useState(1)
 
     return(
-        <div>
+        <div className={theme ? "dark-theme" : "light-theme"}>
             <div className='overlay'>
                 <div onClick={onCloseBasket} className="basketBackOverlay"></div>
                 <div className='basketDrawing'>
@@ -16,12 +16,12 @@ function Basket({onCloseBasket, onClickCloseBasket,onDeleteCart, cartItems = []}
                     </div>
 
                     <div className="basketContent">
-                        {cartItems.map((item) => (
-                                <div className='cart d-flex'>
+                        {cartItems.map((item, i) => (
+                                <div key={i} className='cart d-flex'>
                                     <div className='justify-around'>
                                         <img className='imageUrl' src={item.imageUrl} alt="lol"/>
                                     </div>
-                                    <div className='d-flex justify-between'>
+                                    <div className='rightCart d-flex justify-between'>
                                         <div className='cartContent justify-around'>
                                             <h4>{item.typeOfClothing + ' / ' + item.title}</h4>
                                             <span>Размер: {item.size}</span>
@@ -60,8 +60,6 @@ function Basket({onCloseBasket, onClickCloseBasket,onDeleteCart, cartItems = []}
                     </div>
                 </div>
             </div>
-
-
         </div>
     )
 }

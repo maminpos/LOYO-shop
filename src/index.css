@@ -3,12 +3,45 @@
   --wid: 1vw ;
 }
 
+.dark-theme {
+  background-color: #111111;
+  color: white;
+}
+.dark-theme .wrapper {
+  background-color: #1e1e1e;
+}
+.dark-theme .card {
+  box-shadow: none;
+  border: 1px solid rgba(44, 44, 44, 0.65);
+}
+.dark-theme .drawer {
+  background-color: #111111;
+}
+.dark-theme select {
+  color: white;
+}
+.dark-theme select option {
+  background-color: #1d1d1d;
+}
+.dark-theme .mainHeader ul li a {
+  font-size: 24px;
+  transition: color 0.2s ease-in-out;
+  color: #f5f5f5;
+}
+.dark-theme .mainHeader ul li :hover {
+  color: #c0c0c0;
+}
+
+.light-theme {
+  background-color: #e9ebec;
+  color: black;
+}
+
 html body {
+  overflow-y: scroll;
   margin: 0;
   background-color: #e9ebec;
   font-family: "Inter", system-ui;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 html body::-webkit-scrollbar {
   width: 10px; /* Ширина полосы прокрутки */
@@ -43,7 +76,7 @@ html body::-webkit-scrollbar-track {
 .overlay .basketDrawing {
   padding: 10px 30px 30px;
   margin-top: 5vh;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   width: 69vw;
   left: 15vw;
   height: 90vh;
@@ -103,7 +136,7 @@ html body::-webkit-scrollbar-track {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
   max-width: 90vw;
-  margin: 50px auto;
+  margin: 0 64px;
 }
 
 header {
@@ -130,15 +163,40 @@ header .mainHeader ul li :hover {
   color: #000000;
 }
 header .rightHeader {
-  margin-right: 83px;
+  margin-right: 93px;
 }
 header .rightHeader img {
-  border-radius: 15px;
+  border-radius: 20px;
   width: 50px;
   cursor: pointer;
 }
+header .rightHeader input {
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  margin-left: -15px;
+  font-size: 16px;
+}
+header .rightHeader .searchBlock {
+  position: relative;
+  margin-left: -14%;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+header .rightHeader .searchBlock input {
+  position: absolute;
+}
+header .rightHeader .searchBlock img {
+  width: 20px;
+  height: 20px;
+  left: 230px;
+  top: 15px;
+}
 
-.content .searchInput select {
+.content .searchList {
+  margin-right: 65px;
+}
+.content .searchList select {
   border: 1px solid #dedede;
   padding: 10px 35px 10px 15px;
   font-size: 20px;
@@ -146,10 +204,10 @@ header .rightHeader img {
   appearance: none;
   background-color: transparent;
 }
-.content .searchInput select::-ms-expand {
+.content .searchList select::-ms-expand {
   display: none;
 }
-.content .searchInput img {
+.content .searchList img {
   width: 20px;
   height: 20px;
   position: absolute;

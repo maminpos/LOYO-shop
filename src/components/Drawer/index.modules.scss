@@ -1,3 +1,53 @@
+/* index.modules.scss */
+
+.dark-theme {
+  .overlay {
+    background-color: rgba(17, 17, 17, 0.24);
+
+    .backOverlay {
+      background-color: transparent;
+    }
+
+    .drawer {
+      background-color: #1d1d1d;
+
+      .Content {
+        h4, span, .size button, .buttonAddBasket button, .description h4 {
+          color: white;
+        }
+
+        .size button {
+          background-color: #111111;
+          border: 2px solid #111111;
+        }
+
+        .size button:hover {
+          background-color: #252525;
+          border: none;
+        }
+
+        .buttonAddBasket button {
+          background-color: #443a3a;
+        }
+
+        .buttonAddBasket button:hover {
+          background-color: #2f2828;
+        }
+
+        .description span {
+          color: #b0b0b0;
+        }
+      }
+    }
+  }
+}
+
+
+.light-theme{
+  background-color: #e9ebec;
+  color: black;
+}
+
 .overlay {
   position: fixed;
   left: 0;

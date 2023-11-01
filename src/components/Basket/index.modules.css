@@ -1,4 +1,30 @@
 @charset "UTF-8";
+.dark-theme {
+  background-color: #111111;
+  color: white;
+}
+.dark-theme .overlay {
+  background-color: rgba(17, 17, 17, 0.9);
+}
+.dark-theme .basketDrawing {
+  background-color: #1d1d1d;
+  color: white;
+}
+.dark-theme .basketDrawing .basketContent .rightCart {
+  margin-left: 10px;
+}
+.dark-theme .basketDrawing .basketFooter {
+  background-color: #111111;
+}
+.dark-theme .basketDrawing .basketFooter .decor {
+  background-color: #1d1d1d;
+}
+
+.light-theme {
+  background-color: #e9ebec;
+  color: black;
+}
+
 .basketContent {
   overflow-y: auto;
 }
@@ -43,18 +69,18 @@
 .cart .cartContent .clicker .buttonMinus, .cart .cartContent .clicker .buttonPlus {
   padding: 11px 10px;
   background-color: rgba(225, 225, 225, 0.63);
-  border-radius: 12px;
+  border-radius: 15px;
   border: none;
 }
 .cart .deleteCart {
   position: absolute;
-  top: 20px;
+  top: 23px;
   right: 40px;
 }
 .cart .deleteCart button {
-  padding: 13px;
+  padding: 15px;
   background-color: #443a3a;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
 }

@@ -3,7 +3,7 @@ import "./index.modules.scss"
 import PopupAddToCart from "../Popup/PopupToCart";
 import {useState} from "react";
 
-function Drawer({onClose, obj, onAddToCart}) {
+function Drawer({onClose, theme, obj, onAddToCart}) {
 
     const [buttonClicked, setButtonClicked] = useState(null);
 
@@ -12,22 +12,22 @@ function Drawer({onClose, obj, onAddToCart}) {
     const [newObj, setNewObj] = useState(null);
 
     const handleButtonClick = (index) => {
-        setButtonClicked(index)
-        if (index === 0) {
-            setNewObj({...obj, size: "S"})
-        }
         if (index === 1) {
-            setNewObj({...obj, size: "M"})
+            setNewObj({...obj, size: "S", id2: obj.id + '11111'})
         }
         if (index === 2) {
-            setNewObj({...obj, size: "L"})
+            setNewObj({...obj, size: "M", id2: obj.id + '22222'})
         }
         if (index === 3) {
-            setNewObj({...obj, size: "XL"})
+            setNewObj({...obj, size: "L", id2: obj.id + '33333'})
         }
         if (index === 4) {
-            setNewObj({...obj, size: "XXL"})
+            setNewObj({...obj, size: "XL", id2: obj.id + '44444'})
         }
+        if (index === 5) {
+            setNewObj({...obj, size: "XXL", id2: obj.id + '55555'})
+        }
+        setButtonClicked(index)
     }
 
     const SizeCheck = () => {
@@ -56,6 +56,9 @@ function Drawer({onClose, obj, onAddToCart}) {
 
 
     return(
+        <div className={theme ? "dark-theme" : "light-theme"}>
+
+
         <div className='overlay'>
             <div className="backOverlay" onClick={onClose}></div>
             <div className="drawer">
@@ -76,25 +79,25 @@ function Drawer({onClose, obj, onAddToCart}) {
 
                         <div className="size">
                             <button style={
-                                {backgroundColor: buttonClicked === 0 ? '#252525' : '#f5f5f5',
-                                    color: buttonClicked === 0 ?'white' : 'black'}
-                            } onClick={() => handleButtonClick(0)} className='ml-10'>S</button>
-                            <button style={
                                 {backgroundColor: buttonClicked === 1 ? '#252525' : '#f5f5f5',
                                     color: buttonClicked === 1 ?'white' : 'black'}
-                            } onClick={() => handleButtonClick(1)} className='ml-10'>M</button>
+                            } onClick={() => handleButtonClick(1)} className='ml-10'>S</button>
                             <button style={
                                 {backgroundColor: buttonClicked === 2 ? '#252525' : '#f5f5f5',
                                     color: buttonClicked === 2 ?'white' : 'black'}
-                            } onClick={() => handleButtonClick(2)} className='ml-10'>L</button>
+                            } onClick={() => handleButtonClick(2)} className='ml-10'>M</button>
                             <button style={
                                 {backgroundColor: buttonClicked === 3 ? '#252525' : '#f5f5f5',
                                     color: buttonClicked === 3 ?'white' : 'black'}
-                            } onClick={() => handleButtonClick(3)} className='ml-10'>XL</button>
+                            } onClick={() => handleButtonClick(3)} className='ml-10'>L</button>
                             <button style={
                                 {backgroundColor: buttonClicked === 4 ? '#252525' : '#f5f5f5',
                                     color: buttonClicked === 4 ?'white' : 'black'}
-                            } onClick={() => handleButtonClick(4)} className='ml-10'>XXL</button>
+                            } onClick={() => handleButtonClick(4)} className='ml-10'>XL</button>
+                            <button style={
+                                {backgroundColor: buttonClicked === 5 ? '#252525' : '#f5f5f5',
+                                    color: buttonClicked === 5 ?'white' : 'black'}
+                            } onClick={() => handleButtonClick(5)} className='ml-10'>XXL</button>
                         </div>
 
                         <div className="description">
@@ -115,6 +118,8 @@ function Drawer({onClose, obj, onAddToCart}) {
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
     )
 }

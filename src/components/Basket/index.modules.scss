@@ -1,3 +1,48 @@
+
+.dark-theme {
+  background-color: #111111;
+  color: white;
+
+  .overlay {
+    background-color: rgba(17, 17, 17, 0.9);
+  }
+
+  .basketDrawing {
+    background-color: #1d1d1d;
+    color: white;
+
+    .basketHeader {
+
+    }
+
+    .basketContent {
+
+      .cart {
+
+      }
+
+      .rightCart {
+        margin-left: 10px;
+      }
+    }
+
+    .basketFooter {
+      background-color: #111111;
+
+      .decor {
+        background-color: #1d1d1d;
+      }
+    }
+  }
+}
+
+
+.light-theme{
+  background-color: #e9ebec;
+  color: black;
+}
+
+
 .basketContent {
   overflow-y: auto;
 
@@ -48,7 +93,7 @@
       .buttonMinus, .buttonPlus {
         padding: 11px 10px;
         background-color: rgba(225, 225, 225, 0.63);
-        border-radius: 12px;
+        border-radius: 15px;
         border: none;
       }
     }
@@ -58,13 +103,13 @@
 
   .deleteCart {
     position: absolute;
-    top: 20px;
+    top: 23px;
     right: 40px;
 
     button {
-      padding: 13px;
+      padding: 15px;
       background-color: #443a3a;
-      border-radius: 10px;
+      border-radius: 20px;
       border: none;
       cursor: pointer;
     }

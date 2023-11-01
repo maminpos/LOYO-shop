@@ -1,3 +1,39 @@
+/* index.modules.scss */
+.dark-theme .overlay {
+  background-color: rgba(17, 17, 17, 0.24);
+}
+.dark-theme .overlay .backOverlay {
+  background-color: transparent;
+}
+.dark-theme .overlay .drawer {
+  background-color: #1d1d1d;
+}
+.dark-theme .overlay .drawer .Content h4, .dark-theme .overlay .drawer .Content span, .dark-theme .overlay .drawer .Content .size button, .dark-theme .overlay .drawer .Content .buttonAddBasket button, .dark-theme .overlay .drawer .Content .description h4 {
+  color: white;
+}
+.dark-theme .overlay .drawer .Content .size button {
+  background-color: #111111;
+  border: 2px solid #111111;
+}
+.dark-theme .overlay .drawer .Content .size button:hover {
+  background-color: #252525;
+  border: none;
+}
+.dark-theme .overlay .drawer .Content .buttonAddBasket button {
+  background-color: #443a3a;
+}
+.dark-theme .overlay .drawer .Content .buttonAddBasket button:hover {
+  background-color: #2f2828;
+}
+.dark-theme .overlay .drawer .Content .description span {
+  color: #b0b0b0;
+}
+
+.light-theme {
+  background-color: #e9ebec;
+  color: black;
+}
+
 .overlay {
   position: fixed;
   left: 0;
